@@ -35,11 +35,12 @@ impl<DB: Backend> Queryable<(Integer, VarChar), DB> for User where
 
 pub struct NewUser(String);
 
+use diesel::backend::Sqlite;
 use diesel::expression::AsExpression;
 use diesel::expression::grouped::Grouped;
 use diesel::expression::helper_types::AsExpr;
 
-impl<'a> Insertable<users::table> for &'a NewUser {
+impl<'a> Insertable<users::table, Sqlite> for &'a NewUser {
     type Columns = users::name;
     type Values = Grouped<AsExpr<&'a String, users::name>>;
 
