@@ -4,4 +4,6 @@ description: "Test: diff_table_filter"
 ---
 -- Your SQL goes here
 ALTER TABLE "table_a" DROP COLUMN "code";
-ALTER TABLE "table_a" ADD COLUMN "script" VARCHAR NOT NULL;
+ALTER TABLE "table_a" ADD COLUMN "script" TEXT NOT NULL;
+
+
