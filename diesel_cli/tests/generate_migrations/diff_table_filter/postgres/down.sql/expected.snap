@@ -4,6 +4,6 @@ description: "Test: diff_table_filter"
 ---
 -- This file should undo anything in `up.sql`
 ALTER TABLE "table_a" DROP COLUMN "script";
-ALTER TABLE "table_a" ADD COLUMN "code" VARCHAR NOT NULL;
+ALTER TABLE "table_a" ADD COLUMN "code" TEXT NOT NULL;
 
 
